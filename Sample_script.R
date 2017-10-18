@@ -5,18 +5,25 @@
 ############################################################
 
 # Add in your name
-# Claudia
+# Will
 # Add in purpose of this script
 # To learn about version control on github
 
-# git config --global user.email "you@example.com"
-# git config --global user.name "Your Name"
+# git config --global user.email "willwalton42@hotmail.com"
+# git config --global user.name "willwalton42"
 
 # Libraries ----
 library(ggplot2)
 library(tidyr)
 library(dplyr)
 library(readr)
+
+#my attempt at plotting soil temp vs elevation
+head(temp_elevation)
+ggplot(temp_elevation, aes(x=Elevation.m, y=Soil.temp.mean))+
+  geom_point(colour="red")+
+  geom_smooth(method=lm, alpha=0.6)+
+  theme_bw()
 
 # Functions ----
 # This is a ggplot function for a nice clean theme
